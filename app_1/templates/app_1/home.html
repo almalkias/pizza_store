@@ -1,0 +1,13 @@
+{% extends 'app_1/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'app_1/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<img src="{% static 'app_1/cheese.jpeg' %}" alt="cheese">
+
+<img src="{% static 'app_1/chicken.jpeg' %}" alt="chicken">
+<img src="{% static 'app_1/peporoni.jpeg' %}" alt="peporoni">
+{%  endblock %}
