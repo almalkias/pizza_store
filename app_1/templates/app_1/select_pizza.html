@@ -1,0 +1,17 @@
+{% extends 'app_1/base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'app_1/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'selectPizza' %}" method="POST">
+    {% csrf_token %}
+     {{ form|crispy }}
+    <input type="submit" value="Create" />
+  </form>
+
+{%  endblock %}
